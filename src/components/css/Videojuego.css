@@ -1,0 +1,8 @@
+.contenedorVideoJuego{
+    background-color: red;
+}
+
+.contenedorVideoJuego-div{
+    display: flex;
+    flex-direction: row;
+}
