@@ -1,0 +1,40 @@
+.contenedorPagina{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: min-content;
+    height: min-content;
+    padding: 10px 50px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.contenedorFormulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedorFormulario>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 10px;
+}
+
+.grupoCheckbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+.grupoCheckbox>div{
+    margin: 0 5px;
+}

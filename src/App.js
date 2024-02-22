@@ -1,30 +1,32 @@
-import logo from './logo.svg';
+import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { ListaVideojuegos } from './components/ListaVideojuegos';
-import { Videojuego } from './components/Videojuego';
+import { Home } from './components/Home';
+import { PaginaVideojuegos } from './components/PaginaVideojuegos';
+import { InsertarVideojuego } from './components/InsertarVideojuego';
+import { EditarVideojuego } from './components/EditarVideojuego';
 
 function App() {
-
-  const {id, nombre, descripcion, fechaLanzamiento, compañia, plataformas, categorias, precio, portada, trailer} = {
-    id: 0,
-    nombre: "The Legend Of Zelda: Ocarina Of Time",
-    descripcion: "Link se embarca en un periplo de leyenda a través del tiempo para detener a Ganondorf, el rey de los ladrones Gerudo, que busca la Triforce: una reliquia sagrada que otorga poder ilimitado a su poseedor.",
-    fechaLanzamiento: "21/11/1998",
-    compañia: "Nintendo",
-    plataformas: ["Nintendo 64", "Nintendo 3DS"],
-    categorias: ["Accion", "Aventura", "Puzzles"],
-    precio: 39.99,
-    portada: "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_TheLegendofZeldaOcarinaofTime3D_image1600w.jpg",
-    trailer: "https://www.youtube.com/watch?v=Jfg6RfClZJg&ab_channel=NintendoofAmerica"
-  }
 
   return (
     <div className="App">
       <header className="App-header">
+        <nav>
+          <h4>Biblioteca Videojuegos</h4>
+          <Link to="/">Home</Link>
+          <span>|</span>
+          <Link to="/videojuegos">Videojuegos</Link>
+          <span>|</span>
+          <Link to="/videojuegos/insert">Añadir Videojuegos</Link>
+        </nav>
       </header>
-      <section>
-        <ListaVideojuegos/>
-      </section>
+      <div className='contenedorPagina'>
+        <Routes>
+          <Route path="/" exact element={<Home/>}/>
+          <Route path="/videojuegos" exact element={<PaginaVideojuegos/>}/>
+          <Route path="/videojuegos/insert" exact element={<InsertarVideojuego/>}/>
+          <Route path="/videojuegos/update/:videojuegoId" exact element={<EditarVideojuego/>}/>
+        </Routes>
+      </div>
     </div>
   );
 }

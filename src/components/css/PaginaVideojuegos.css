@@ -1,0 +1,14 @@
+.contenedorPaginaVideojuegos{
+    color: white;
+}
+
+.grupoCheckbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grupoCheckbox>div{
+    margin: 0 5px;
+}

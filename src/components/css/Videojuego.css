@@ -1,8 +1,66 @@
-.contenedorVideoJuego{
-    background-color: red;
+.contenedorPagina{
+    display: flex;
+    justify-content: center;
+    padding: 0 300px;
 }
 
-.contenedorVideoJuego-div{
+.contenedorVideojuego{
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    padding: 10px 40px;
+    margin: 10px 0;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedorVideojuego>*:not(a){
+    color: inherit;
+}
+
+.contenedorVideojuego>label{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedorVideojuego>div*:not(.contenedorModal){
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedorModal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgb(144, 148, 150, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.contenidoModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height: 700px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+img{
+    width: 50%;
+    height: 50%;
 }
