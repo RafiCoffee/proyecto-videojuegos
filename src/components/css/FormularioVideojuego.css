@@ -4,8 +4,8 @@
 }
 
 form{
-    width: min-content;
-    height: min-content;
+    width: 700px;
+    height: fit-content;
     padding: 10px 50px;
     background-color: grey;
     border: 2px solid black;
@@ -14,12 +14,20 @@ form{
 
 .contenedorFormulario{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
     width: 100%;
 }
 
 .contenedorFormulario>div{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.contenedorAtributos{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,12 +35,35 @@ form{
     margin: 0 10px;
 }
 
-.grupoCheckbox{
+#titulos{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+#checkboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.contenedorCheckboxes{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.grupoCheckbox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 30px;
+    margin: 0 20px;
 }
 
 .grupoCheckbox>div{

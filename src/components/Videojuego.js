@@ -24,7 +24,6 @@ export const Videojuego = ({id, nombre, descripcion, fechaLanzamiento, compañia
             ? <p>{descripcion.substring(0, 101)}...</p>
             : <p>{descripcion}</p>
         }
-        <a href={trailer}>Trailer de {nombre}</a>
     </div>
   )
 }

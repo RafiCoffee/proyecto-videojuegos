@@ -38,7 +38,7 @@ export const InfoVideojuego = ({id, nombre, descripcion, fechaLanzamiento, compa
         </section>
 
         <p>{descripcion}</p>
-        <a href={trailer}>Trailer de {nombre}</a>
+        <a id="trailer" href={trailer}>Trailer de {nombre}</a>
 
         <div className='opcionesVideojuego'>
             <button> <Link to={`/videojuegos/update/${id}`}>Editar Videojuego</Link> </button>

@@ -7,6 +7,12 @@
 .contenedorVideojuego{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: 900px;
+    height: max-content;
+    min-height: 500px;
     background-color: grey;
     padding: 10px 40px;
     margin: 10px 0;
@@ -61,6 +67,8 @@
 }
 
 img{
-    width: 50%;
-    height: 50%;
+    width: fit-content;
+    max-width: 800px;
+    height: fit-content;
+    max-height: 600px;
 }
